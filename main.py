@@ -11,33 +11,28 @@ from colorama import Fore
 from luhn import verify
 
 print(f'''{Fore.RED}
- ▄▄▄       ███▄ ▄███▓ ▄▄▄      ▒███████▒ ▒█████   ███▄    █     ▄████▄   ▄▄▄       ██▀███  ▓█████▄   ██████ 
-▒████▄    ▓██▒▀█▀ ██▒▒████▄    ▒ ▒ ▒ ▄▀░▒██▒  ██▒ ██ ▀█   █    ▒██▀ ▀█  ▒████▄    ▓██ ▒ ██▒▒██▀ ██▌▒██    ▒ 
-▒██  ▀█▄  ▓██    ▓██░▒██  ▀█▄  ░ ▒ ▄▀▒░ ▒██░  ██▒▓██  ▀█ ██▒   ▒▓█    ▄ ▒██  ▀█▄  ▓██ ░▄█ ▒░██   █▌░ ▓██▄   
-░██▄▄▄▄██ ▒██    ▒██ ░██▄▄▄▄██   ▄▀▒   ░▒██   ██░▓██▒  ▐▌██▒   ▒▓▓▄ ▄██▒░██▄▄▄▄██ ▒██▀▀█▄  ░▓█▄   ▌  ▒   ██▒
- ▓█   ▓██▒▒██▒   ░██▒ ▓█   ▓██▒▒███████▒░ ████▓▒░▒██░   ▓██░   ▒ ▓███▀ ░ ▓█   ▓██▒░██▓ ▒██▒░▒████▓ ▒██████▒▒
- ▒▒   ▓▒█░░ ▒░   ░  ░ ▒▒   ▓▒█░░▒▒ ▓░▒░▒░ ▒░▒░▒░ ░ ▒░   ▒ ▒    ░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░
-  ▒   ▒▒ ░░  ░      ░  ▒   ▒▒ ░░░▒ ▒ ░ ▒  ░ ▒ ▒░ ░ ░░   ░ ▒░     ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░ ░ ▒  ▒ ░ ░▒  ░ ░
-  ░   ▒   ░      ░     ░   ▒   ░ ░ ░ ░ ░░ ░ ░ ▒     ░   ░ ░    ░          ░   ▒     ░░   ░  ░ ░  ░ ░  ░  ░  
-      ░  ░       ░         ░  ░  ░ ░        ░ ░           ░    ░ ░            ░  ░   ░        ░          ░  
-                               ░                               ░                            ░              
-     -Made By Fax                          
+▄▄▄      ▒███████▒  ██████  ▄████▄       ▄████ ▓█████  ███▄    █ 
+▒████▄    ▒ ▒ ▒ ▄▀░▒██    ▒ ▒██▀ ▀█      ██▒ ▀█▒▓█   ▀  ██ ▀█   █ 
+▒██  ▀█▄  ░ ▒ ▄▀▒░ ░ ▓██▄   ▒▓█    ▄    ▒██░▄▄▄░▒███   ▓██  ▀█ ██▒
+░██▄▄▄▄██   ▄▀▒   ░  ▒   ██▒▒▓▓▄ ▄██▒   ░▓█  ██▓▒▓█  ▄ ▓██▒  ▐▌██▒
+ ▓█   ▓██▒▒███████▒▒██████▒▒▒ ▓███▀ ░   ░▒▓███▀▒░▒████▒▒██░   ▓██░ -Close the window to shut down the program
+ ▒▒   ▓▒█░░▒▒ ▓░▒░▒▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░    ░▒   ▒ ░░ ▒░ ░░ ▒░   ▒ ▒ 
+  ▒   ▒▒ ░░░▒ ▒ ░ ▒░ ░▒  ░ ░  ░  ▒        ░   ░  ░ ░  ░░ ░░   ░ ▒░
+  ░   ▒   ░ ░ ░ ░ ░░  ░  ░  ░           ░ ░   ░    ░      ░   ░ ░ 
+      ░  ░  ░ ░          ░  ░ ░               ░    ░  ░         ░ 
+          ░                 ░                                        
+Amazon Storecard Generator Made by: RebootedOrbit#0533, discord server: https://discord.gg/EsvpGV7vHv                       
                                ''')
 
 
-print(f"{Fore.RED}[?] What Bin would you like to use?")
+print(f"{Fore.BLUE}[?][/] Enter to start generating.")
 check2 = input(f'{Fore.RED}[?]>')
 
 #60457811 - use this bin if you dong got another
 
-
-
-
 BIN = check2
 
-
-
-print(f"{Fore.GREEN}[:] Gen Starting in 3 seconds!.")
+print(f"{Fore.BLUE}[/] Starting.")
 time.sleep(3)
 while True:
 
@@ -47,15 +42,15 @@ while True:
         check = verify(card)
         if check == True:
 
-                print(f"{Fore.GREEN}[VALID] {card}")
-                f = open("Codes.txt",'a')
+                print(f"{Fore.GREEN}[>] {card} is a valid Store Card!")
+                f = open("cards.txt",'a')
                 f.write(f"{card}\n")
                 f.close()
                 time.sleep(1)
                 
 
         else:
-         print(f"{Fore.RED}[INVALID] {card}")
+         print(f"{Fore.RED}[!] {card} is not a valid Store Card!")
          time.sleep(1)
 
 
